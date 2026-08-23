@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhruvanshi Patel — 16-Bit Arcade GitHub & Unstop Portfolio</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Dhruvanshi Patel — 16-Bit Arcade Portfolio">
+  <meta name="description" content="CE Student @ DDU Gujarat (CGPA 9.08). Full-Stack Developer, PeerUp Creator, DevOps & Cloud Security explorer, 16-Bit Arcade Engine Creator. Unstop Profile @ce072pat15689.">
+
+  <!-- Google Fonts: Press Start 2P, Silkscreen, VT323, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Retro Canvas Background -->
+  <canvas id="pixelCanvas"></canvas>
+  <div class="crt-overlay"></div>
+
+  <!-- Top Navigation HUD Bar -->
+  <header class="hud-nav">
+    <div class="hud-logo">
+      <span class="pixel-heart-icon"><i class="fa-solid fa-heart"></i></span>
+      <span class="hud-title">DHRUVANSHI.PATEL</span>
+    </div>
+    <nav class="hud-links">
+      <a href="#about" class="hud-link active"><i class="fa-solid fa-terminal"></i> ABOUT</a>
+      <a href="#projects" class="hud-link"><i class="fa-solid fa-gamepad"></i> PROJECTS</a>
+      <a href="#tools" class="hud-link"><i class="fa-solid fa-wand-magic-sparkles"></i> TOOLS</a>
+      <a href="#future" class="hud-link"><i class="fa-solid fa-trophy"></i> ROADMAP</a>
+      <a href="#connect" class="hud-link"><i class="fa-solid fa-paper-plane"></i> CONNECT</a>
+    </nav>
+    <div class="hud-controls">
+      <button id="sfxToggleBtn" class="pixel-btn sfx-btn" title="Toggle 8-Bit Audio SFX">
+        <i class="fa-solid fa-volume-high"></i> SFX: <span id="sfxState">ON</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-layout">
+
+    <!-- HERO / 16-BIT ARCADE BANNER SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="arcade-cabinet">
+        <!-- Arcade Header Screen HUD -->
+        <div class="arcade-top-hud">
+          <div class="hud-item">PLAYER: <span class="text-cyan">DHRUVANSHI PATEL</span></div>
+          <div class="hud-item">COLLEGE: <span class="text-gold">DDU GUJARAT</span></div>
+          <div class="hud-item">CGPA: <span class="text-pink">9.08 / 10 (92%)</span></div>
+        </div>
+
+        <!-- Arcade Main Display Box -->
+        <div class="arcade-screen">
+          <div class="pixel-star-decor star-top-left">✦</div>
+          <div class="pixel-star-decor star-top-right">✦</div>
+          
+          <!-- FLASHING 16-BIT PINK TITLE -->
+          <div class="flashing-title-wrap">
+            <h1 class="flashing-pixel-title" id="mainTitle">HI i am dhruvanshi Patel</h1>
+          </div>
+
+          <!-- DYNAMIC CREDENTIALS TICKER -->
+          <div class="credentials-ticker-box">
+            <div class="ticker-prefix"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="ticker-text-wrap">
+              <span id="credentialText" class="ticker-text text-pink">FULL-STACK DEVELOPER &amp; CE STUDENT @ DDU GUJARAT</span>
+            </div>
+            <div class="ticker-cursor"></div>
+          </div>
+
+          <!-- Credential Control Pills -->
+          <div class="credential-pills">
+            <button class="cred-pill active" data-index="0">💻 DDU Student</button>
+            <button class="cred-pill" data-index="1">👾 Arcade Engine</button>
+            <button class="cred-pill" data-index="2">🚀 PeerUp Creator</button>
+            <button class="cred-pill" data-index="3">⚡ C++ &amp; JS Dev</button>
+            <button class="cred-pill" data-index="4">☁️ DevOps &amp; FinOps</button>
+            <button class="cred-pill" data-index="5">🏆 Tic Tech Toe '26</button>
+          </div>
+
+          <!-- Arcade CTA Actions -->
+          <div class="arcade-cta-row">
+            <a href="https://www.linkedin.com/in/dhruvanshi-patel-070105e18/" target="_blank" class="pixel-btn primary-pink-btn">
+              <i class="fa-brands fa-linkedin"></i> LINKEDIN PROFILE
+            </a>
+            <a href="https://github.com/Dhruvanshi-Patel" target="_blank" class="pixel-btn secondary-cyan-btn">
+              <i class="fa-brands fa-github"></i> GITHUB PROFILE (@Dhruvanshi-Patel)
+            </a>
+          </div>
+        </div>
+
+        <!-- Arcade Machine Bottom Decor -->
+        <div class="arcade-bottom-hud">
+          <span>PRESS [SPACE] TO CYCLE REAL CREDENTIALS</span>
+          <span>DDU GUJARAT ■ CGPA 9.08</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & TERMINAL SECTION -->
+    <section class="section-container" id="about">
+      <div class="section-header">
+        <h2 class="section-title text-pink"><i class="fa-solid fa-terminal"></i> PLAYER_PROFILE.json</h2>
+        <p class="section-subtitle">Real academic &amp; contact diagnostics for Dhruvanshi Patel</p>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Interactive Terminal CLI Box -->
+        <div class="pixel-card terminal-card">
+          <div class="terminal-header">
+            <div class="term-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="term-title">dhruvanshi@ddu: ~/whoami</div>
+          </div>
+          <div class="terminal-body">
+            <div class="term-line"><span class="term-prompt">╰─❯</span> <span class="term-cmd">cat whoami.json</span></div>
+            <pre class="term-code"><code id="whoamiJson">{
+  <span class="json-key">"name"</span>: <span class="json-str">"Dhruvanshi Patel"</span>,
+  <span class="json-key">"email"</span>: <span class="json-str">"pateldhruvanshi0@gmail.com"</span>,
+  <span class="json-key">"phone"</span>: <span class="json-str">"+91 8849269913"</span>,
+  <span class="json-key">"linkedin"</span>: <span class="json-str">"dhruvanshi-patel-070105e18"</span>,
+  <span class="json-key">"college"</span>: <span class="json-str">"Dharmsinh Desai University (DDU), Gujarat"</span>,
+  <span class="json-key">"cgpa"</span>: <span class="json-num">9.08</span>,
+  <span class="json-key">"percentage"</span>: <span class="json-str">"92%"</span>,
+  <span class="json-key">"status"</span>: <span class="json-str">"🟢 CE Student & Full-Stack Developer"</span>
+}</code></pre>
+            <div class="term-actions">
+              <button id="runWhoamiBtn" class="pixel-btn mini-btn active"><i class="fa-solid fa-play"></i> whoami.json</button>
+              <button id="runSuperpowersBtn" class="pixel-btn mini-btn"><i class="fa-solid fa-bolt"></i> superpowers.txt</button>
+              <button id="runStatsBtn" class="pixel-btn mini-btn"><i class="fa-solid fa-chart-line"></i> contact_stats.log</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Superpowers & Verified Credentials List -->
+        <div class="pixel-card superpowers-card">
+          <h3 class="card-title text-cyan"><i class="fa-solid fa-wand-magic-sparkles"></i> REAL SKILLS &amp; ACCOMPLISHMENTS</h3>
+          <ul class="superpowers-list">
+            <li>
+              <span class="sp-icon text-pink">🎓</span>
+              <div>
+                <strong>Academic Distinction @ DDU Gujarat:</strong>
+                <p>Maintaining a 9.08 CGPA (92%) in Computer Engineering / Science.</p>
+              </div>
+            </li>
+            <li>
+              <span class="sp-icon text-purple">👾</span>
+              <div>
+                <strong>16-Bit Arcade Engine Architect (Built Here):</strong>
+                <p>Created retro CRT scanline framework, SVG flashing header, and Web Audio SFX synth.</p>
+              </div>
+            </li>
+            <li>
+              <span class="sp-icon text-gold">🚀</span>
+              <div>
+                <strong>PeerUp Creator (Omnikon Hackathon):</strong>
+                <p>Designed and deployed PeerUp peer-to-peer skill exchange platform on Vercel.</p>
+              </div>
+            </li>
+            <li>
+              <span class="sp-icon text-cyan">🏆</span>
+              <div>
+                <strong>Tic Tech Toe '26 Hackathon (DA-IICT):</strong>
+                <p>Participated in idea submission &amp; algorithmic solution design at DA-IICT Gandhinagar.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section class="section-container" id="projects">
+      <div class="section-header">
+        <h2 class="section-title text-cyan"><i class="fa-solid fa-gamepad"></i> BUILT PROJECTS &amp; REPOSITORIES</h2>
+        <p class="section-subtitle">Code repositories, interactive engines, and hackathon submissions</p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: Built Here 16-Bit Arcade Engine -->
+        <div class="pixel-card project-card">
+          <div class="project-badge-top text-pink">BUILT HERE · ARCADE ENGINE</div>
+          <h3 class="project-title">👾 16-Bit Arcade Web Engine &amp; Profile</h3>
+          <p class="project-desc">Custom retro arcade web engine featuring flashing pink title banner generator, CRT scanline overlay, starfield canvas particle animation, and 8-bit Web Audio synth.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML5 Canvas</span>
+            <span class="tag">Web Audio API</span>
+            <span class="tag">SVG Animation</span>
+            <span class="tag">Vanilla JS</span>
+            <span class="tag">CSS3</span>
+          </div>
+          <div class="project-stats">
+            <span><i class="fa-solid fa-gauge-high text-gold"></i> 60 FPS Engine</span>
+            <span><i class="fa-solid fa-music text-green"></i> 8-Bit Audio Synth</span>
+          </div>
+          <div class="project-links">
+            <a href="http://localhost:8080" target="_blank" class="pixel-btn card-btn"><i class="fa-solid fa-eye"></i> LIVE PREVIEW</a>
+          </div>
+        </div>
+
+        <!-- Project 2: PeerUp -->
+        <div class="pixel-card project-card">
+          <div class="project-badge-top text-gold">OMNIKON HACKATHON · FEATURED</div>
+          <h3 class="project-title">🤝 PeerUp — Skill Exchange Platform</h3>
+          <p class="project-desc">Peer-to-peer skill exchange platform built for Omnikon Hackathon. Features interactive skill matching, active commits, and live Vercel deployment.</p>
+          <div class="tech-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Vercel</span>
+          </div>
+          <div class="project-stats">
+            <span><i class="fa-solid fa-code-commit text-cyan"></i> 18 Active Commits</span>
+            <span><i class="fa-solid fa-rocket text-green"></i> Live Vercel App</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Dhruvanshi-Patel/PeerUp" target="_blank" class="pixel-btn card-btn"><i class="fa-brands fa-github"></i> VIEW REPO</a>
+          </div>
+        </div>
+
+        <!-- Project 3: DevOps Roadmap -->
+        <div class="pixel-card project-card">
+          <div class="project-badge-top text-cyan">DEVOPS &amp; CLOUD SECURITY</div>
+          <h3 class="project-title">☁️ DevOps &amp; FinOps Roadmap 2026</h3>
+          <p class="project-desc">Deep-dive repository exploring DevOps pipeline automation, FinOps infrastructure cost management, and Cloud Security architectures.</p>
+          <div class="tech-tags">
+            <span class="tag">DevOps</span>
+            <span class="tag">FinOps</span>
+            <span class="tag">Cloud Security</span>
+            <span class="tag">CI/CD</span>
+          </div>
+          <div class="project-stats">
+            <span><i class="fa-solid fa-shield-halved text-green"></i> Security Focus</span>
+            <span><i class="fa-solid fa-chart-pie text-pink"></i> FinOps Specs</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Dhruvanshi-Patel/devops-roadmap" target="_blank" class="pixel-btn card-btn"><i class="fa-brands fa-github"></i> VIEW REPO</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Tic Tech Toe '26 -->
+        <div class="pixel-card project-card">
+          <div class="project-badge-top text-green">DA-IICT GANDHINAGAR HACKATHON</div>
+          <h3 class="project-title">🎮 Tic Tech Toe '26 Innovation</h3>
+          <p class="project-desc">Algorithmic hackathon idea submission developed for DA-IICT Gandhinagar's flagship national tech contest on Unstop.</p>
+          <div class="tech-tags">
+            <span class="tag">C++</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">DA-IICT</span>
+          </div>
+          <div class="project-stats">
+            <span><i class="fa-solid fa-trophy text-gold"></i> Hackathon Entry</span>
+            <span><i class="fa-solid fa-award text-green"></i> Unstop Verified</span>
+          </div>
+          <div class="project-links">
+            <a href="https://unstop.com/u/ce072pat15689" target="_blank" class="pixel-btn card-btn"><i class="fa-solid fa-award"></i> UNSTOP ENTRY</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS & TECH ARSENAL SECTION -->
+    <section class="section-container" id="tools">
+      <div class="section-header">
+        <h2 class="section-title text-gold"><i class="fa-solid fa-wand-magic-sparkles"></i> REAL SKILLS &amp; TECH ARSENAL</h2>
+        <p class="section-subtitle">Skills verified on Unstop &amp; GitHub profile</p>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Programming & Web Stack -->
+        <div class="pixel-card">
+          <h3 class="card-title text-pink"><i class="fa-solid fa-code"></i> PROGRAMMING &amp; FRONTEND</h3>
+          <div class="skill-bars">
+            <div class="skill-item">
+              <div class="skill-name">JavaScript &amp; HTML5 / CSS3 <span class="skill-pct">94%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-pink" style="width: 94%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">16-Bit Pixel UI / UX &amp; Micro-Animations <span class="skill-pct">92%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-cyan" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">C++ Programming <span class="skill-pct">92%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-gold" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">PHP &amp; Tailwind CSS <span class="skill-pct">88%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-green" style="width: 88%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database, Cloud & Media -->
+        <div class="pixel-card">
+          <h3 class="card-title text-cyan"><i class="fa-solid fa-server"></i> DATABASES, CLOUD &amp; MEDIA</h3>
+          <div class="skill-bars">
+            <div class="skill-item">
+              <div class="skill-name">Microsoft SQL Server &amp; SQL <span class="skill-pct">90%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-cyan" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">DevOps &amp; Cloud Security <span class="skill-pct">88%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-green" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Content Writing &amp; Speech Delivery <span class="skill-pct">95%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-pink" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Video Editing &amp; Media Production <span class="skill-pct">88%</span></div>
+              <div class="pixel-bar-bg"><div class="pixel-bar-fill fill-gold" style="width: 88%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE GOALS ROADMAP SECTION -->
+    <section class="section-container" id="future">
+      <div class="section-header">
+        <h2 class="section-title text-green"><i class="fa-solid fa-trophy"></i> WHAT I WOULD LIKE TO DO IN FUTURE</h2>
+        <p class="section-subtitle">Level progression, aspirations, and upcoming quests</p>
+      </div>
+
+      <div class="roadmap-timeline">
+        <!-- Level 1 -->
+        <div class="roadmap-card pixel-card">
+          <div class="level-badge level-1">LEVEL 1</div>
+          <div class="roadmap-content">
+            <h3>🚀 Master Cloud Infrastructure, DevOps &amp; FinOps</h3>
+            <p>Build automated CI/CD pipelines with robust cloud security &amp; infrastructure cost optimization monitoring.</p>
+          </div>
+        </div>
+
+        <!-- Level 2 -->
+        <div class="roadmap-card pixel-card">
+          <div class="level-badge level-2">LEVEL 2</div>
+          <div class="roadmap-content">
+            <h3>🤝 Expand PeerUp &amp; Open-Source Full-Stack Applications</h3>
+            <p>Scale PeerUp to empower thousands of university students to exchange technical skills &amp; collaborate effectively.</p>
+          </div>
+        </div>
+
+        <!-- Level 3 -->
+        <div class="roadmap-card pixel-card">
+          <div class="level-badge level-3">LEVEL 3</div>
+          <div class="roadmap-content">
+            <h3>🏆 Win Top-Tier National &amp; International Hackathons</h3>
+            <p>Compete in hackathons with high-impact software solutions and build real-world products.</p>
+          </div>
+        </div>
+
+        <!-- Final Boss -->
+        <div class="roadmap-card pixel-card boss-card">
+          <div class="level-badge level-boss">FINAL BOSS 👑</div>
+          <div class="roadmap-content">
+            <h3>👑 Lead Engineering Teams &amp; Innovate Big Tech Architecture</h3>
+            <p>Architect scalable software solutions that impact millions of users globally while maintaining top academic excellence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT & PROFILE LINKS SECTION -->
+    <section class="section-container" id="connect">
+      <div class="section-header">
+        <h2 class="section-title text-pink"><i class="fa-solid fa-paper-plane"></i> CONNECT &amp; PROFILE LINKS</h2>
+        <p class="section-subtitle">Official contact channels for Dhruvanshi Patel</p>
+      </div>
+
+      <div class="connect-grid">
+        <!-- LinkedIn Profile -->
+        <a href="https://www.linkedin.com/in/dhruvanshi-patel-070105e18/" target="_blank" class="pixel-card connect-card linkedin-card">
+          <div class="connect-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <div class="connect-info">
+            <h3>LinkedIn Official</h3>
+            <p>dhruvanshi-patel-070105e18</p>
+          </div>
+          <div class="connect-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+
+        <!-- GitHub Profile -->
+        <a href="https://github.com/Dhruvanshi-Patel" target="_blank" class="pixel-card connect-card github-card">
+          <div class="connect-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="connect-info">
+            <h3>GitHub Official</h3>
+            <p>@Dhruvanshi-Patel</p>
+          </div>
+          <div class="connect-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+
+        <!-- Email Direct -->
+        <div class="pixel-card connect-card email-card" id="emailCopyBtn">
+          <div class="connect-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="connect-info">
+            <h3>Gmail Direct</h3>
+            <p id="emailText">pateldhruvanshi0@gmail.com</p>
+          </div>
+          <div class="connect-arrow" id="copyBadge"><i class="fa-solid fa-copy"></i></div>
+        </div>
+
+        <!-- Phone Direct -->
+        <a href="tel:+918849269913" class="pixel-card connect-card phone-card">
+          <div class="connect-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="connect-info">
+            <h3>Phone Direct</h3>
+            <p>+91 8849269913</p>
+          </div>
+          <div class="connect-arrow"><i class="fa-solid fa-phone-flip"></i></div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="arcade-footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        Designed with <span class="text-pink">♥</span> for <strong>Dhruvanshi Patel</strong> (pateldhruvanshi0@gmail.com · +91 8849269913)
+      </div>
+      <div class="footer-status">
+        <span class="blink-dot"></span> GAME STATUS: READY [1P]
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-msg">Copied to clipboard! 📋</div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

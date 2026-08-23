@@ -1,0 +1,239 @@
+<svg width="920" height="280" viewBox="0 0 920 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark Arcade Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0214"/>
+      <stop offset="50%" style="stop-color:#160526"/>
+      <stop offset="100%" style="stop-color:#090111"/>
+    </linearGradient>
+
+    <!-- Pink Glow Filters -->
+    <filter id="pink-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="subtle-pink-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Pink Gradient for Text -->
+    <linearGradient id="pink-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff2a8d"/>
+      <stop offset="30%" style="stop-color:#ff69b4"/>
+      <stop offset="70%" style="stop-color:#ff007f"/>
+      <stop offset="100%" style="stop-color:#ff77c2"/>
+    </linearGradient>
+
+    <!-- Retro Pixel Grid Background Pattern -->
+    <pattern id="pixel-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="none"/>
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 105, 180, 0.07)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Retro CRT Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="rgba(0,0,0,0.3)" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Silkscreen:wght@400;700&amp;display=swap');
+
+    .bg-rect { fill: url(#bg); }
+    .grid-rect { fill: url(#pixel-grid); }
+    .scanline-rect { fill: url(#scanlines); }
+
+    /* 16-Bit Pixel Flashing Title Animation */
+    .pixel-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 24px;
+      font-weight: bold;
+      fill: url(#pink-text-grad);
+      filter: url(#pink-glow);
+      animation: pixelFlash 1.6s infinite alternate, floatText 3s ease-in-out infinite;
+    }
+
+    @keyframes pixelFlash {
+      0% {
+        opacity: 1;
+        filter: drop-shadow(0 0 12px #ff007f) drop-shadow(0 0 24px #ff69b4);
+      }
+      25% {
+        opacity: 0.85;
+        filter: drop-shadow(0 0 4px #ff007f);
+      }
+      50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 16px #ff007f) drop-shadow(0 0 32px #ff1493);
+      }
+      75% {
+        opacity: 0.9;
+        filter: drop-shadow(0 0 8px #ff69b4);
+      }
+      100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 20px #ff007f) drop-shadow(0 0 40px #ff00aa);
+      }
+    }
+
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+    }
+
+    /* Subtitle & Stats Styles */
+    .arcade-hud {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px;
+      fill: #ff77c2;
+      letter-spacing: 1px;
+    }
+
+    .arcade-stat-val {
+      fill: #00ffff;
+      font-weight: bold;
+    }
+
+    /* Credential Cycler Animations */
+    .cred-text {
+      font-family: 'Silkscreen', 'Press Start 2P', monospace;
+      font-size: 15px;
+      font-weight: 700;
+      fill: #ffffff;
+      filter: url(#subtle-pink-glow);
+    }
+
+    /* Animated 16-Bit Arcade Icons */
+    .pixel-heart {
+      animation: heartPulse 1.2s infinite ease-in-out;
+      transform-origin: center;
+    }
+
+    @keyframes heartPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .blink-prompt {
+      animation: cursorBlink 0.8s infinite steps(2, start);
+    }
+
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .arcade-border {
+      stroke: #ff007f;
+      stroke-width: 3;
+      fill: none;
+      filter: url(#subtle-pink-glow);
+      animation: borderGlow 4s infinite alternate;
+    }
+
+    @keyframes borderGlow {
+      0% { stroke: #ff007f; }
+      50% { stroke: #ff69b4; }
+      100% { stroke: #00ffff; }
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect class="bg-rect" x="0" y="0" width="920" height="280" rx="12" />
+  <rect class="grid-rect" x="0" y="0" width="920" height="280" rx="12" />
+
+  <!-- Outer 16-Bit Pixel Frame -->
+  <rect class="arcade-border" x="12" y="12" width="896" height="256" rx="8" />
+  <rect x="18" y="18" width="884" height="244" fill="none" stroke="rgba(255, 105, 180, 0.3)" stroke-width="1" rx="6" />
+
+  <!-- Top Arcade HUD Bar -->
+  <g class="arcade-hud">
+    <text x="36" y="44">PLAYER: <tspan class="arcade-stat-val">DHRUVANSHI PATEL</tspan></text>
+    <text x="390" y="44">COLLEGE: <tspan class="arcade-stat-val">DDU GUJARAT</tspan></text>
+    <text x="690" y="44">CGPA: <tspan class="arcade-stat-val">9.08 / 10</tspan></text>
+
+    <!-- Pixel Hearts (Lives) -->
+    <g transform="translate(848, 32)" class="pixel-heart">
+      <path d="M2 0 h3 v2 h-3 z M8 0 h3 v2 h-3 z M0 2 h7 v2 h-7 z M7 2 h6 v2 h-6 z M0 4 h13 v2 h-13 z M2 6 h9 v2 h-9 z M4 8 h5 v2 h-5 z M6 10 h1 v2 h-1 z" fill="#ff0055"/>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="32" y1="58" x2="888" y2="58" stroke="#ff007f" stroke-width="2" opacity="0.6" stroke-dasharray="6,4"/>
+
+  <!-- Main Flashing Pink Title: HI I AM DHRUVANSHI PATEL -->
+  <g transform="translate(460, 115)">
+    <text text-anchor="middle" class="pixel-title">HI i am dhruvanshi Patel</text>
+  </g>
+
+  <!-- Arcade Sub-banner Box for Real Cycling Credentials -->
+  <g transform="translate(110, 150)">
+    <rect x="0" y="0" width="700" height="52" rx="6" fill="rgba(255, 0, 127, 0.12)" stroke="#ff007f" stroke-width="1.5" />
+    <rect x="4" y="4" width="692" height="44" rx="4" fill="rgba(10, 2, 20, 0.7)" />
+
+    <!-- Terminal Prompt Icon -->
+    <text x="20" y="32" font-family="'Press Start 2P', monospace" font-size="14" fill="#ff007f">&gt;</text>
+
+    <!-- Credential Switcher via SVG animate -->
+    <g transform="translate(44, 32)">
+      <!-- Credential 1 -->
+      <text class="cred-text" fill="#00ffff">
+        💻 FULL-STACK DEVELOPER &amp; CE STUDENT @ DDU GUJARAT
+        <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;0;0;0;0" keyTimes="0;0.14;0.16;0.98;1;1;1;1;1;1;1;1" dur="14s" repeatCount="indefinite" />
+      </text>
+
+      <!-- Credential 2 -->
+      <text class="cred-text" fill="#ff77c2">
+        👾 16-BIT ARCADE ENGINE &amp; PROFILE GENERATOR BUILDER
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0;0;0;0" keyTimes="0;0.16;0.18;0.32;0.34;1;1;1;1;1;1;1" dur="14s" repeatCount="indefinite" />
+      </text>
+
+      <!-- Credential 3 -->
+      <text class="cred-text" fill="#ffea00">
+        🚀 PEERUP CREATOR · OMNIKON HACKATHON VERCEL APP
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0;0;0;0;0;0" keyTimes="0;0.34;0.36;0.50;0.52;1;1;1;1;1;1;1" dur="14s" repeatCount="indefinite" />
+      </text>
+
+      <!-- Credential 4 -->
+      <text class="cred-text" fill="#00ff66">
+        ⚡ C++ &amp; JAVASCRIPT PROGRAMMER · CGPA 9.08 (92%)
+        <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0;0;0;0" keyTimes="0;0.52;0.54;0.68;0.70;1;1;1;1;1;1;1" dur="14s" repeatCount="indefinite" />
+      </text>
+
+      <!-- Credential 5 -->
+      <text class="cred-text" fill="#00e5ff">
+        ☁️ DEVOPS, FINOPS &amp; CLOUD SECURITY ARCHITECT
+        <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;1;1;0;0" keyTimes="0;0.70;0.72;0.84;0.86;1;1;1;1;1;1;1" dur="14s" repeatCount="indefinite" />
+      </text>
+
+      <!-- Credential 6 -->
+      <text class="cred-text" fill="#bd00ff">
+        🏆 TIC TECH TOE '26 HACKATHON PARTICIPANT @ DA-IICT
+        <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;1;1" keyTimes="0;0.86;0.88;0.98;1;1;1;1;1;1;1;1" dur="14s" repeatCount="indefinite" />
+      </text>
+    </g>
+
+    <!-- Blinking Cursor -->
+    <rect x="665" y="16" width="10" height="20" fill="#ff007f" class="blink-prompt" />
+  </g>
+
+  <!-- Bottom Arcade Footer Details -->
+  <g transform="translate(36, 238)">
+    <text font-family="'Press Start 2P', monospace" font-size="9" fill="#8855aa">UNSTOP: @ce072pat15689 | GITHUB: @Dhruvanshi-Patel</text>
+  </g>
+  <g transform="translate(710, 238)">
+    <text font-family="'Press Start 2P', monospace" font-size="9" fill="#ff007f">READY [1P] ■</text>
+  </g>
+
+  <!-- CRT Scanlines Overlay -->
+  <rect class="scanline-rect" x="0" y="0" width="920" height="280" rx="12" pointer-events="none" opacity="0.4"/>
+</svg>
