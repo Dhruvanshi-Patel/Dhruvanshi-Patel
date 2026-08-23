@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="920" height="280" viewBox="0 0 920 280" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Dark Arcade Background Gradient -->
@@ -45,8 +46,9 @@
     </pattern>
   </defs>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Silkscreen:wght@400;700&amp;display=swap');
+  <style type="text/css">
+  <![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
 
     .bg-rect { fill: url(#bg); }
     .grid-rect { fill: url(#pixel-grid); }
@@ -54,7 +56,7 @@
 
     /* 16-Bit Pixel Flashing Title Animation */
     .pixel-title {
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', 'Courier New', monospace;
       font-size: 24px;
       font-weight: bold;
       fill: url(#pink-text-grad);
@@ -90,9 +92,9 @@
       50% { transform: translateY(-3px); }
     }
 
-    /* Subtitle & Stats Styles */
+    /* Subtitle and Stats Styles */
     .arcade-hud {
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', 'Courier New', monospace;
       font-size: 10px;
       fill: #ff77c2;
       letter-spacing: 1px;
@@ -105,7 +107,7 @@
 
     /* Credential Cycler Animations */
     .cred-text {
-      font-family: 'Silkscreen', 'Press Start 2P', monospace;
+      font-family: 'Silkscreen', 'Press Start 2P', 'Courier New', monospace;
       font-size: 15px;
       font-weight: 700;
       fill: #ffffff;
@@ -145,6 +147,7 @@
       50% { stroke: #ff69b4; }
       100% { stroke: #00ffff; }
     }
+  ]]>
   </style>
 
   <!-- Background Layer -->
@@ -170,7 +173,7 @@
   <!-- Divider Line -->
   <line x1="32" y1="58" x2="888" y2="58" stroke="#ff007f" stroke-width="2" opacity="0.6" stroke-dasharray="6,4"/>
 
-  <!-- Main Flashing Pink Title: HI I AM DHRUVANSHI PATEL -->
+  <!-- Main Flashing Pink Title: HI i am dhruvanshi Patel -->
   <g transform="translate(460, 115)">
     <text text-anchor="middle" class="pixel-title">HI i am dhruvanshi Patel</text>
   </g>
@@ -181,7 +184,7 @@
     <rect x="4" y="4" width="692" height="44" rx="4" fill="rgba(10, 2, 20, 0.7)" />
 
     <!-- Terminal Prompt Icon -->
-    <text x="20" y="32" font-family="'Press Start 2P', monospace" font-size="14" fill="#ff007f">&gt;</text>
+    <text x="20" y="32" font-family="Press Start 2P, monospace" font-size="14" fill="#ff007f">&gt;</text>
 
     <!-- Credential Switcher via SVG animate -->
     <g transform="translate(44, 32)">
@@ -228,10 +231,10 @@
 
   <!-- Bottom Arcade Footer Details -->
   <g transform="translate(36, 238)">
-    <text font-family="'Press Start 2P', monospace" font-size="9" fill="#8855aa">UNSTOP: @ce072pat15689 | GITHUB: @Dhruvanshi-Patel</text>
+    <text font-family="Press Start 2P, monospace" font-size="9" fill="#8855aa">UNSTOP: @ce072pat15689 | GITHUB: @Dhruvanshi-Patel</text>
   </g>
   <g transform="translate(710, 238)">
-    <text font-family="'Press Start 2P', monospace" font-size="9" fill="#ff007f">READY [1P] ■</text>
+    <text font-family="Press Start 2P, monospace" font-size="9" fill="#ff007f">READY [1P] ■</text>
   </g>
 
   <!-- CRT Scanlines Overlay -->
