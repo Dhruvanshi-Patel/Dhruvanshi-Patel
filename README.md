@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./header.svg" width="100%" alt="Dhruvanshi Patel — Hi I am Dhruvanshi Patel"/>
+  <img src="./header.svg" width="100%" alt="Dhruvanshi Patel — Hii I am Dhruvanshi Patel"/>
 </div>
 
 <br/>
