@@ -7,7 +7,6 @@
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-dhruvanshi--patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dhruvanshi-patel-070105e18/)&nbsp;
-[![Gmail](https://img.shields.io/badge/Gmail-pateldhruvanshi0%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pateldhruvanshi0@gmail.com)&nbsp;
 [![Unstop](https://img.shields.io/badge/Unstop-@ce072pat15689-14213D?style=for-the-badge&logo=unstop&logoColor=FF007F)](https://unstop.com/u/ce072pat15689)&nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-@Dhruvanshi--Patel-181717?style=for-the-badge&logo=github&logoColor=FF007F)](https://github.com/Dhruvanshi-Patel)&nbsp;
 [![PeerUp Demo](https://img.shields.io/badge/PeerUp-Vercel_App-000000?style=for-the-badge&logo=vercel&logoColor=00FFFF)](https://github.com/Dhruvanshi-Patel/PeerUp)
@@ -29,13 +28,10 @@
 ╰─❯ cat whoami.json
 {
   "name"        : "Dhruvanshi Patel",
-  "email"       : "pateldhruvanshi0@gmail.com",
-  "phone"       : "+91 8849269913",
   "linkedin"    : "dhruvanshi-patel-070105e18",
   "college"     : "Dharmsinh Desai University (DDU), Gujarat 🏫",
   "branch"      : "Computer Engineering (CE '25–Present)",
-  "cgpa"        : 9.08,
-  "percentage"  : "92%",
+  "cgpa"        : "9.08",
   "unstop_user" : "ce072pat15689",
   "github_user" : "Dhruvanshi-Patel",
   "status"      : "🟢 CE Student & Full-Stack Developer",
