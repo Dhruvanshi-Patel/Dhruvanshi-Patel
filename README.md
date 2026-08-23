@@ -51,7 +51,7 @@
 🍎  Academic Excellence @ DDU — CGPA 9.08 / 10 (92%)
 👾  16-Bit Arcade Web Engine & SVG Header Generator
 🚀  PeerUp — Omnikon Hackathon Project (Skill exchange Vercel app)
-🏆  Tic Tech Toe '26 Hackathon Idea Submission @ DA-IICT
+🏆  Tic Tech Toe '26 Hackathon  @ DA-IICT
 ⚡  Proficient in C++, JavaScript, PHP & SQL / MS SQL Server
 ☁️  DevOps, FinOps & Cloud Security Architecture 2026
 ```
