@@ -34,7 +34,7 @@
   "cgpa"        : "9.08",
   "unstop_user" : "ce072pat15689",
   "github_user" : "Dhruvanshi-Patel",
-  "status"      : "🟢 CE Student & Full-Stack Developer",
+  "status"      : "🟢 CE Student ",
   "interests"   : ["Full-Stack Web Dev", "16-Bit UI/UX", "DevOps & FinOps", "Cloud Security"],
   "location"    : "Gujarat, India 🇮🇳"
 }
